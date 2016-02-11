@@ -30,13 +30,13 @@ var TETRIS = {
     LevelUpRow: 10, // Number of row(s) must be cleared to get to the next level
     LevelUpSpeed: 50, // Speed increase every level up (in microsecond)
     PieceColor: { // Color of the pieces (in HTML color)
-      I: 'red',
-      J: 'orange',
-      L: 'magenta',
-      O: 'blue',
-      S: 'lime',
-      T: 'olive',
-      Z: 'cyan'
+      R: 'red',
+      O: 'orange',
+      M: 'magenta',
+      B: 'blue',
+      L: 'lime',
+      V: 'olive',
+      C: 'cyan'
     },
     ScoreMultiplier: 10, // Score multiplier
     StartingSpeed: 1000, // Starting interval speed (in microsecond)
@@ -68,31 +68,12 @@ var TETRIS = {
   // ========= //
   // The most difficult and fun bit to develop.
   piece: {
-    available: [ 'I', 'J', 'L', 'O', 'S', 'T', 'Z' ],
+    available: [ 'R', 'O', 'M', 'B', 'L', 'V', 'C' ],
     type: {
-      I: {
-        start: [ 3, 0 ],
-        shape: [
-          [ [ 0, 0 ], [ 1, 0 ], [ 2, 0 ], [ 3, 0 ] ],
-          [ [ 0, 0 ], [ 0, 1 ], [ 0, 2 ], [ 0, 3 ] ]
-        ]
-      },
-      J: {
+      R: {
         start: [ 4, 0 ],
         shape: [
-          [ [ 0, 0 ], [ 0, 1 ], [ 1, 1 ], [ 2, 1 ] ],
-          [ [ 2, 0 ], [ 1, 0 ], [ 1, 1 ], [ 1, 2 ] ],
-          [ [ 2, 2 ], [ 2, 1 ], [ 1, 1 ], [ 0, 1 ] ],
-          [ [ 0, 2 ], [ 1, 2 ], [ 1, 1 ], [ 1, 0 ] ]
-        ]
-      },
-      L: {
-        start: [ 4, 0 ],
-        shape: [
-          [ [ 2, 0 ], [ 2, 1 ], [ 1, 1 ], [ 0, 1 ] ],
-          [ [ 2, 2 ], [ 1, 2 ], [ 1, 1 ], [ 1, 0 ] ],
-          [ [ 0, 2 ], [ 0, 1 ], [ 1, 1 ], [ 2, 1 ] ],
-          [ [ 0, 0 ], [ 1, 0 ], [ 1, 1 ], [ 1, 2 ] ]
+          [ [ 0, 0 ], [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
         ]
       },
       O: {
@@ -101,27 +82,34 @@ var TETRIS = {
           [ [ 0, 0 ], [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
         ]
       },
-      S: {
+      M: {
         start: [ 4, 0 ],
         shape: [
-          [ [ 2, 0 ], [ 1, 0 ], [ 1, 1 ], [ 0, 1 ] ],
-          [ [ 0, 0 ], [ 0, 1 ], [ 1, 1 ], [ 1, 2 ] ]
+          [ [ 0, 0 ], [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
         ]
       },
-      T: {
+      B: {
         start: [ 4, 0 ],
         shape: [
-          [ [ 1, 0 ], [ 0, 1 ], [ 1, 1 ], [ 2, 1 ] ],
-          [ [ 2, 1 ], [ 1, 0 ], [ 1, 1 ], [ 1, 2 ] ],
-          [ [ 1, 2 ], [ 2, 1 ], [ 1, 1 ], [ 0, 1 ] ],
-          [ [ 0, 1 ], [ 1, 2 ], [ 1, 1 ], [ 1, 0 ] ]
+          [ [ 0, 0 ], [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
         ]
       },
-      Z: {
+      L: {
         start: [ 4, 0 ],
         shape: [
-          [ [ 0, 0 ], [ 1, 0 ], [ 1, 1 ], [ 2, 1 ] ],
-          [ [ 2, 0 ], [ 2, 1 ], [ 1, 1 ], [ 1, 2 ] ]
+          [ [ 0, 0 ], [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
+        ]
+      },
+      V: {
+        start: [ 4, 0 ],
+        shape: [
+          [ [ 0, 0 ], [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
+        ]
+      },
+      C: {
+        start: [ 4, 0 ],
+        shape: [
+          [ [ 0, 0 ], [ 1, 0 ], [ 0, 1 ], [ 1, 1 ] ]
         ]
       }
     }
