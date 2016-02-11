@@ -1,8 +1,8 @@
 # Tetris
 
-This project is an implementation of Tetris written in pure JavaScript. It's intended to be a very simple implementation which attempted to cover all the aspects of the original game (e.g. tetromino pieces, rotation, clearing row, scoring, leveling up, etc).
+This javascript project which makes all the blocks into squares.
 
-You can view/play the game in JSFiddle: http://jsfiddle.net/rarioj/pHFrX/1/
+Credit: https://github.com/rarioj/tetris
 
 ## What is Tetris?
 
