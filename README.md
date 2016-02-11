@@ -67,9 +67,3 @@ TETRIS.play('container-name', {
   VoidColor: '#fafafa' // Color of a blank/void block (in HTML color)
 });
 ```
-
-### TODO
-
-- Ability to pause, start, and restart the game.
-- Next piece block is currently showing only the letter.
-- Keeping high score records?
